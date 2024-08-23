@@ -7,28 +7,26 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
-module: {
-        rules: [
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader',
-                },
-            },
-        ],
-    },
-    resolve: {
-        extensions: ['.js'],
-    },
-};
-module: {
+  module: {
     rules: [
       {
-        test: /\.css$/i,  // Regex to match .css files
+        test: /\.js$/, 
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',  
+        },
+      },
+      {
+        test: /\.css$/i,  
         use: [
-          'style-loader',  // Injects CSS into the DOM
-          'css-loader',    // Resolves CSS imports
+          'style-loader', 
+          'css-loader',   
         ],
       },
+    ],
+  },
+  resolve: {
+    extensions: ['.js'],
+  },
 };
+
