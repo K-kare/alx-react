@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import { StyleSheet, css } from 'aphrodite';
 
 function App() {
   return (
@@ -21,5 +22,30 @@ function App() {
     </div>
   );
 }
+const style = StyleSheet.create({
+  body: {
+    fontFamily: 'Arial, sans-serif',
+    fontSize: '16px',
+    backgroundColor: '#f5f5f5',
+    padding: '20px',
+  },
+  footer: {
+    fontFamily: 'Arial, sans-serif',
+    fontSize: '14px',
+    backgroundColor: '#ccc',
+    padding: '10px',
+    textAlign: 'center',
+    position: 'fixed',
+    bottom: '0',
+    width: '100%',
+  },
+  app: {
+    minHeight: '100vh',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+  },
+});
+
 
 export default App;
